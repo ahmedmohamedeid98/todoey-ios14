@@ -46,17 +46,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Todoey" id="6tG-0r-BvI"/>
                     <connections>
-                        <segue destination="NOQ-0O-HI5" kind="show" identifier="toItemsSegue" id="bdW-5N-fpx"/>
+                        <outlet property="tableView" destination="764-4p-ufs" id="5AG-pD-wZJ"/>
+                        <segue destination="NOQ-0O-HI5" kind="show" identifier="toItems" id="5Y6-3C-MAg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.9275362318842" y="76.339285714285708"/>
+            <point key="canvasLocation" x="1317" y="76"/>
         </scene>
         <!--Category Name-->
         <scene sceneID="w9F-EN-WC4">
             <objects>
-                <viewController id="NOQ-0O-HI5" sceneMemberID="viewController">
+                <viewController id="NOQ-0O-HI5" customClass="ItemViewController" customModule="todoey_realm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rWT-eo-DCc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,8 +76,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="NOQ-0O-HI5" id="psv-3K-O4c"/>
-                                    <outlet property="delegate" destination="NOQ-0O-HI5" id="MCb-B8-iLO"/>
+                                    <outlet property="dataSource" destination="NOQ-0O-HI5" id="3Zo-Kg-wRn"/>
+                                    <outlet property="delegate" destination="NOQ-0O-HI5" id="YzP-HG-c1k"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -90,10 +91,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Category Name" id="ReQ-aM-PrD"/>
+                    <connections>
+                        <outlet property="tableView" destination="I5N-8i-hVm" id="KW5-KH-cQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZY-cR-a51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137.68115942029" y="75.669642857142847"/>
+            <point key="canvasLocation" x="2030" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0ud-UU-QtM">
