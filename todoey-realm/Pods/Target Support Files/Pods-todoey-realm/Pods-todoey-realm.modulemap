@@ -1,0 +1,6 @@
+framework module Pods_todoey_realm {
+  umbrella header "Pods-todoey-realm-umbrella.h"
+
+  export *
+  module * { export * }
+}
