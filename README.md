@@ -1,2 +1,2 @@
 # todoey-ios14
-use CoreData and Realm database solutions
+use CoreData and Realm database solution
