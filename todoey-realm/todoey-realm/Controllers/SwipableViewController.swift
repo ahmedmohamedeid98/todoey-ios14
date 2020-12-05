@@ -16,10 +16,13 @@ class SwipableViewController: UIViewController, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, cb) in
+            
             self.deleteCell(at: indexPath)
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
+            
+            cb(true)
         }
         
         return UISwipeActionsConfiguration(actions: [delete])
